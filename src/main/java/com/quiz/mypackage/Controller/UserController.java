@@ -65,6 +65,7 @@ public class UserController {
 		return userService.findAll();
 	}
 	
+	
 	@PostMapping("/user")
 	public User save(@RequestBody User user) {		
 		UserDetails userdetails = org.springframework.security.core.userdetails.User
@@ -91,6 +92,7 @@ public class UserController {
 	
 	@PostMapping("/signin")
 	public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest){
+		System.out.println("Hello");
 		Authentication authentication;
 		try {
 			authentication = authenticationManager

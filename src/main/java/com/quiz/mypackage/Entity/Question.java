@@ -25,25 +25,39 @@ public class Question {
 	@Column(name="question",nullable=false,unique=true)
 	private String question;
 	
-	@Column(name="options",nullable=false)
-	private List<String> options;
+	@Column(name="optionA",nullable=false)
+	private String optionA;
+	
+	@Column(name="optionB",nullable=false)
+	private String optionB;	
+	
+	@Column(name="optionC",nullable=false)
+	private String optionC;	
+	
+	@Column(name="optionD",nullable=false)
+	private String optionD;
 	
 	@Column(name="answer",nullable=false)
 	private String answer;
 	
 	
 	public Question() {}
-
-	public Question(int id, Quiz topic, String question, List<String> options, String answer) {
+	
+	public Question(int id, Quiz topic, String question, String optionA, String optionB, String optionC, String optionD,
+			String answer) {
 		super();
 		this.id = id;
 		this.topic = topic;
 		this.question = question;
-		this.options = options;
+		this.optionA = optionA;
+		this.optionB = optionB;
+		this.optionC = optionC;
+		this.optionD = optionD;
 		this.answer = answer;
 	}
 
-	
+
+
 	public int getId() {
 		return id;
 	}
@@ -68,12 +82,36 @@ public class Question {
 		this.question = question;
 	}
 
-	public List<String> getOptions() {
-		return options;
+	public String getOptionA() {
+		return optionA;
 	}
 
-	public void setOptions(List<String> options) {
-		this.options = options;
+	public void setOptionA(String optionA) {
+		this.optionA = optionA;
+	}
+
+	public String getOptionB() {
+		return optionB;
+	}
+
+	public void setOptionB(String optionB) {
+		this.optionB = optionB;
+	}
+
+	public String getOptionC() {
+		return optionC;
+	}
+
+	public void setOptionC(String optionC) {
+		this.optionC = optionC;
+	}
+
+	public String getOptionD() {
+		return optionD;
+	}
+
+	public void setOptionD(String optionD) {
+		this.optionD = optionD;
 	}
 
 	public String getAnswer() {
