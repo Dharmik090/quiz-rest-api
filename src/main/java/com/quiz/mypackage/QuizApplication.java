@@ -15,10 +15,10 @@ import io.swagger.v3.oas.annotations.info.Info;
 					contact = @Contact(name = "Dharmik",
 									   email = "d@gamil.com")))
 
-public class Quiz2Application {
+public class QuizApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Quiz2Application.class, args);
+		SpringApplication.run(QuizApplication.class, args);
 	}
 
 }
